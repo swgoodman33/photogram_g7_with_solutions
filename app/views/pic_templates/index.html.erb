@@ -1,1 +1,13 @@
-<h1>Hi index</h1>
+<h1>All Photos</h1>
+
+<a>Add a new photo</a>
+
+<% @list_of_photos.each do |a_photo| %>
+  <div class="thumbnail">
+  <img src="<%= a_photo.source %>">
+
+  <a class="btn btn-secondary btn-block", href="http://localhost:3000/photos/<%= a_photo.id %>">Show details</a>
+  <a class="btn btn-secondary btn-block", href="http://localhost:3000/photos/<%= a_photo.id %>/edit">Edit</a>
+  <a class="btn btn-secondary btn-block", href="http://localhost:3000/delete_photo/<%= a_photo.id %>">Delete</a>
+</div>
+  <% end %>
